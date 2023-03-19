@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        h3 {
+          font-size: 1.75rem;
+        }
+
+        h4 {
+          font-size: 1.5rem;
+        }
+
+        h5 {
+          font-size: 1.25rem;
+        }
+
+        h6 {
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Group 2 Restaurant</title>
+  </head>
+  <body>
+    <div
+      class="fixed w-full z-20 navigtion-bar padding grid grid-cols-12 gap-4 text-[#382C20] items-center hidden lg:grid"
+    >
+      <div class="col-span-5 flex justify-end gap-20">
+        <h6>HOME</h6>
+        <h6>OUR FOOD</h6>
+        <h6>MENU</h6>
+      </div>
+      <div class="col-span-2">
+        <div class="flex flex-col items-center">
+          <img src="img/Logo.png" alt="" class="h-[4vw]" />
+        </div>
+      </div>
+      <div class="col-span-5 flex justify-start gap-20">
+        <h6>GALLERY</h6>
+        <h6>LOCATION</h6>
+        <h6>CONTACT</h6>
+      </div>
+    </div>
+
+    <!--First Row-->
+    <div
+      id="carouselIndicators"
+      class="carousel slide"
+      data-bs-interval="5000"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators z-10">
+        <button
+          type="button"
+          data-bs-target="#carouselIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <!--Slide 1-->
+        <div class="carousel-item active" data-bs-interval="100000000">
+          <div
+            class="bg-[#FDE5B9] py-20 px-4 min-h-[100vh] lg:py-0 lg:px-0 grid grid-cols-1 lg:grid-cols-2 items-center"
+          >
+            <img src="img/1.png" alt="" class="justify-self-center w-[45%]" />
+            <div
+              class="text-[#DE5864] lg:w-[75%] justify-self-start mt-14 lg:mt-0"
+            >
+              <p class="h1">
+                <b>
+                  Fusce vehicula sit amet leo id fermentum. Proin vitae nisl
+                  neque.
+                </b>
+              </p>
+              <p class="h5 my-4 lg:my-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <button
+                type="button"
+                class="bg-[#DE5864] text-white rounded-full px-4 py-2"
+              >
+                Button
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--Slide 2-->
+        <div class="carousel-item" data-bs-interval="100000000">
+          <div
+            class="bg-[#E8EDE3] py-20 px-4 min-h-[100vh] lg:py-0 lg:px-0 grid grid-cols-1 lg:grid-cols-2 items-center"
+          >
+            <div
+              class="text-[#A03C5D] lg:w-[75%] lg:justify-self-end lg:text-end order-7 lg:order-6 mt-14 lg:mt-0"
+            >
+              <p class="h1">
+                <b>
+                  Nam rutrum eu dui quis mollis. Maecenas vitae ex eu arcu.
+                </b>
+              </p>
+              <p class="h5 my-4 lg:my-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <button
+                type="button"
+                class="bg-[#A03C5D] text-white rounded-full px-4 py-2"
+              >
+                Button
+              </button>
+            </div>
+            <img
+              src="img/2.png"
+              alt=""
+              class="justify-self-center order-6 lg:order-7 w-[35%]"
+            />
+          </div>
+        </div>
+
+        <!--Slide 3-->
+        <div class="carousel-item" data-bs-interval="100000000">
+          <div
+            class="bg-[#FDE4E6] py-20 px-4 min-h-[100vh] lg:py-0 lg:px-0 grid grid-cols-1 lg:grid-cols-2 items-center"
+          >
+            <img src="img/3.png" alt="" class="justify-self-center w-[40%]" />
+            <div
+              class="text-[#E0444E] lg:w-[75%] justify-self-start mt-14 lg:mt-0"
+            >
+              <p class="h1">
+                <b>
+                  Maecenas vitae ex eu arcu scelerisque lacinia et ac odio.
+                </b>
+              </p>
+              <p class="h5 my-4 lg:my-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <button
+                type="button"
+                class="bg-[#E0444E] text-white rounded-full px-4 py-2"
+              >
+                Button
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!--Slide 4-->
+        <div class="carousel-item" data-bs-interval="100000000">
+          <div
+            class="bg-[#FCEBB7] py-20 px-4 min-h-[100vh] lg:py-0 lg:px-0 grid grid-cols-1 lg:grid-cols-2 items-center"
+          >
+            <div
+              class="text-[#558374] lg:w-[75%] lg:justify-self-end lg:text-end order-7 lg:order-6 mt-14 lg:mt-0"
+            >
+              <p class="h1">
+                <b>
+                  Class aptent taciti sociosqu ad litora torquent per conubia
+                  nostra, per inceptos.
+                </b>
+              </p>
+              <p class="h5 my-4 lg:my-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <button
+                type="button"
+                class="bg-[#558374] text-white rounded-full px-4 py-2"
+              >
+                Button
+              </button>
+            </div>
+            <img
+              src="img/4.png"
+              alt=""
+              width="35%"
+              class="justify-self-center order-6 lg:order-7 w-[35%]"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Second Row-->
+    <div
+      class="bg-[#E4E1D7] min-h-[80vh] grid grid-cols-4 items-center py-[3rem] sm:py-0"
+    >
+      <img
+        src="img/5.png"
+        alt=""
+        class="justify-self-start h-[55vh] hidden lg:block"
+      />
+      <div
+        class="col-span-4 px-4 lg:col-span-2 lg:px-0 text-center text-[#110042]"
+      >
+        <h1>Aliquam faucibus et ipsum</h1>
+        <h6 class="text-justify py-5">
+          Nam quis est quis purus faucibus sollicitudin vitae fermentum nibh.
+          Sed sapien dolor, viverra vel vulputate eu, sodales vel leo. Etiam
+          pretium, arcu non ultrices consectetur, enim risus tincidunt nisl,
+          eget lacinia neque sapien ut turpis. Pellentesque ultrices dolor quis
+          volutpat malesuada. Curabitur tellus ligula, elementum vel magna
+          accumsan, venenatis rhoncus urna.
+        </h6>
+        <h6>Proin malesuada vitae libero id hendrerit.</h6>
+      </div>
+      <img
+        src="img/6.png"
+        alt=""
+        class="justify-self-end h-[55vh] hidden lg:block"
+      />
+    </div>
+
+    <!--Third Row-->
+    <div
+      class="bg-[#FAFAFA] flex justify-center items-center py-[1.5rem] xl:py-[3rem]"
+    >
+      <div class="w-full xl:w-[80vw] px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-6 xl:gap-0"
+        >
+          <!--Blog 1-->
+          <div class="bg-[#D7D1D2] py-16 flex flex-col items-center">
+            <img src="img/7.png" alt="" class="h-[125px] sm:h-[175px]" />
+            <h3 class="mt-5 text-[#816560] text-2xl sm:text-3xl">
+              Nunc volutpat facilisis
+            </h3>
+            <h5 class="mt-3 mb-2">elit dignissim</h5>
+            <button
+              type="button"
+              class="mt-3 bg-[#816560] text-white rounded-full px-4 py-2"
+            >
+              Button
+            </button>
+          </div>
+
+          <!--Blog 2-->
+          <div class="bg-[#FFEFCF] py-16 flex flex-col items-center">
+            <img src="img/8.png" alt="" class="h-[125px] sm:h-[175px]" />
+            <h3 class="mt-5 text-[#CEA46E] text-2xl sm:text-3xl">
+              Nunc volutpat facilisis
+            </h3>
+            <h5 class="mt-3 mb-2">elit dignissim</h5>
+            <button
+              type="button"
+              class="mt-3 bg-[#CEA46E] text-white rounded-full px-4 py-2"
+            >
+              Button
+            </button>
+          </div>
+
+          <!--Blog 3-->
+          <div class="bg-[#EBE8DD] py-16 flex flex-col items-center">
+            <img src="img/9.png" alt="" class="h-[125px] sm:h-[175px]" />
+            <h3 class="mt-5 text-[#8D6F52] text-2xl sm:text-3xl">
+              Nunc volutpat facilisis
+            </h3>
+            <h5 class="mt-3 mb-2">elit dignissim</h5>
+            <button
+              type="button"
+              class="mt-3 bg-[#8D6F52] text-white rounded-full px-4 py-2"
+            >
+              Button
+            </button>
+          </div>
+
+          <!--Blog 4-->
+          <div class="bg-[#E2E2DE] py-16 flex flex-col items-center">
+            <img src="img/11.png" alt="" class="h-[125px] sm:h-[175px]" />
+            <h3 class="mt-5 text-[#A9533E] text-2xl sm:text-3xl">
+              Nunc volutpat facilisis
+            </h3>
+            <h5 class="mt-3 mb-2">elit dignissim</h5>
+            <button
+              type="button"
+              class="mt-3 bg-[#A9533E] text-white rounded-full px-4 py-2"
+            >
+              Button
+            </button>
+          </div>
+
+          <!--Blog 5-->
+          <div class="bg-[#A5D8E5] py-16 flex flex-col items-center">
+            <img src="img/14.png" alt="" class="h-[125px] sm:h-[175px]" />
+            <h3 class="mt-5 text-[#110042] text-2xl sm:text-3xl">
+              Nunc volutpat facilisis
+            </h3>
+            <h5 class="mt-3 mb-2">elit dignissim</h5>
+            <button
+              type="button"
+              class="mt-3 bg-[#110042] text-white rounded-full px-4 py-2"
+            >
+              Button
+            </button>
+          </div>
+
+          <!--Blog 6-->
+          <div class="bg-[#FFCFD2] py-16 flex flex-col items-center">
+            <img src="img/12.png" alt="" class="h-[125px] sm:h-[175px]" />
+            <h3 class="mt-5 text-[#C06268] text-2xl sm:text-3xl">
+              Nunc volutpat facilisis
+            </h3>
+            <h5 class="mt-3 mb-2">elit dignissim</h5>
+            <button
+              type="button"
+              class="mt-3 bg-[#C06268] text-white rounded-full px-4 py-2"
+            >
+              Button
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Fourth Row-->
+    <div
+      class="bg-[#A5D8E5] text-[#110042] flex justify-center py-4 sm:py-5 px-4 sm:px-0"
+    >
+      <!-- <img src="img/10.png" alt="" class="justify-self-center w-[40vh]" /> -->
+
+      <form
+        action="/"
+        method="post"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full sm:w-[80%] lg:w-[70%] xl:w-[50%]"
+      >
+        <h1 class="sm:col-span-2">Booking</h1>
+
+        <div>
+          <label for="inputDate" class="form-label"><h6>Date</h6></label>
+          <input
+            type="date"
+            class="form-control rounded-md"
+            id="inputDate"
+            name="inputDate"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="inputTime" class="form-label"><h6>Time</h6></label>
+          <input
+            type="time"
+            class="form-control rounded-md"
+            id="inputTime"
+            name="inputTime"
+            required
+          />
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="inputPeople" class="form-label"><h6>People</h6></label>
+          <select
+            id="inputPeople"
+            name="inputPeople"
+            class="form-select rounded-md"
+            required
+          >
+            <option selected value="">Please Select</option>
+            <option>1 person</option>
+            <option>2 persons</option>
+            <option>3 persons</option>
+            <option>4 persons</option>
+            <option>5 persons</option>
+            <option>6 persons</option>
+            <option>7 persons</option>
+            <option>8 persons</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="inputFirstName" class="form-label"
+            ><h6>First name</h6></label
+          >
+          <input
+            type="text"
+            class="form-control rounded-md"
+            id="inputFirstName"
+            name="inputFirstName"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="inputLastName" class="form-label">
+            <h6>Last name</h6></label
+          >
+          <input
+            type="text"
+            class="form-control rounded-md"
+            id="inputLastName"
+            name="inputLastName"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="inputEmail" class="form-label"> <h6>Email</h6></label>
+          <input
+            type="email"
+            class="form-control rounded-md"
+            id="inputEmail"
+            name="inputEmail"
+            required
+          />
+        </div>
+
+        <div>
+          <label for="inputPhone" class="form-label"> <h6>Phone</h6></label>
+          <input
+            type="text"
+            class="form-control rounded-md"
+            id="inputPhone"
+            name="inputPhone"
+            required
+          />
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="Textarea" class="form-label"
+            ><h6>Special Requirements</h6></label
+          >
+          <textarea
+            class="form-control rounded-md"
+            id="Textarea"
+            name="Textarea"
+            rows="3"
+            placeholder="Optional"
+          ></textarea>
+        </div>
+
+        <div class="mt-3">
+          <button
+            type="submit"
+            class="bg-[#110042] text-white rounded-full px-4 py-2"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"
+      integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/stickyNavbar.js"></script>
+  </body>
+</html>

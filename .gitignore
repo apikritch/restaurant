@@ -1,4 +1,4 @@
 docker-compose.yml
-server/config
+server/.env
 server/node_modules
 server/Dockerfile
