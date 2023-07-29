@@ -67,7 +67,7 @@ app.post("/", function (req, res) {
       console.log(response);
     })
     .then(() => {
-      res.redirect("/");
+      res.redirect("/project/4");
     })
     .catch((err) => {
       console.error(err);
