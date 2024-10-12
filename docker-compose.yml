@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  restaurant-website:
+    image: restaurant:website
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: restaurant-website
+    restart: always
+    ports: ["8082:8080"]
+    working_dir: /server
+    volumes:
+      - ./server/public:/server/public

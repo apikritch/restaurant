@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -29,7 +29,7 @@ const client = new DynamoDBClient({
 const tableName = process.env.TABLENAME;
 
 app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "/public/index.html"));
+  res.sendFile(__dirname + "/public/index.html");
 });
 
 app.post("/", function (req, res) {
